@@ -13,12 +13,16 @@ CREATE USER 'jdbctest'@'%' IDENTIFIED BY 'jdbctest';
 GRANT ALL ON edudb.* TO 'jdbctest'@'%';
 
 -- 권한 적용
-FLUSH PRIVILEGES;
+FLUSH PRIVILEGES; '''
+
 
 2. 데이터베이스 선택
+'''
 USE edudb;
+'''
 
 3. 테이블 생성
+'''
 CREATE TABLE board (
     num       INT PRIMARY KEY AUTO_INCREMENT,
     pass      VARCHAR(30)  NOT NULL,
@@ -29,7 +33,7 @@ CREATE TABLE board (
     readcount INT          DEFAULT 0,
     writedate DATETIME     DEFAULT CURRENT_TIMESTAMP
 );
-
+'''
 4. 테이블 컬럼 정보 확인
 DESC board;
 
