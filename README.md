@@ -13,13 +13,13 @@ CREATE USER 'jdbctest'@'%' IDENTIFIED BY 'jdbctest';
 GRANT ALL ON edudb.* TO 'jdbctest'@'%';
 
 -- 권한 적용
-FLUSH PRIVILEGES; '''
+FLUSH PRIVILEGES;```
 
 
 2. 데이터베이스 선택
-'''
+```
 USE edudb;
-'''
+```
 
 3. 테이블 생성
 '''
