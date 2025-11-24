@@ -1,24 +1,39 @@
 # JSP11_SpringBoot_Migration
 
-### 계정생성
-create database edudb;
-create user 'jdbctest'@'%' identified by 'jdbctest'; grant all on edudb.* to 'jdbctest'@'%';
-flush privileges;
+## 1. 데이터베이스 및 계정 생성
 
-### 데이블 사용
-use edudb;
+```sql
+-- 데이터베이스 생성
+CREATE DATABASE edudb;
 
-### 데이블 생성
-create table board(
-    num int primary key auto_increment,
-    pass varchar(30) not null,
-    name varchar(30),
-    email varchar(30),
-    title varchar(50),
-    content varchar(1000),
-    readcount int default 0,
-    writedate datetime default current_timestamp
+-- 계정 생성
+CREATE USER 'jdbctest'@'%' IDENTIFIED BY 'jdbctest';
+
+-- 권한 부여
+GRANT ALL ON edudb.* TO 'jdbctest'@'%';
+
+-- 권한 적용
+FLUSH PRIVILEGES;
+
+
+## 2. 데이터베이스 선택
+'''
+USE edudb;
+'''
+
+
+## 3. 데이블 생성
+CREATE TABLE board (
+    num       INT PRIMARY KEY AUTO_INCREMENT,
+    pass      VARCHAR(30)  NOT NULL,
+    name      VARCHAR(30),
+    email     VARCHAR(30),
+    title     VARCHAR(50),
+    content   VARCHAR(1000),
+    readcount INT          DEFAULT 0,
+    writedate DATETIME     DEFAULT CURRENT_TIMESTAMP
 );
+
 
 ### 데이블 컬럼 정보 확인
 desc board;
