@@ -52,5 +52,5 @@ VALUES ('전원지', 'one@nate.com', '1111', '갯골마을', '돼지삼겹살이
 
 COMMIT;
 
-6. 데이터 확인
+--- 데이터 확인
 SELECT * FROM board;
