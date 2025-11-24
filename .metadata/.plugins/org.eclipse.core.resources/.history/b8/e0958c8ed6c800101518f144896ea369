@@ -1,0 +1,5 @@
+package com.saeyan.repository;
+
+public class BoardRepository {
+
+}

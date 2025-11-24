@@ -1,0 +1,9 @@
+package com.saeyan.controller;
+
+import org.springframework.stereotype.Controller;
+
+
+@Controller
+public class BoardServlet {
+
+}

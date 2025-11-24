@@ -1,0 +1,103 @@
+package com.saeyan.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.saeyan.dto.BoardVO;
+import com.saeyan.service.BoardService;
+
+import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+
+
+@Controller
+@Log4j2
+public class BoardController {
+	
+	@Autowired
+	private BoardService boardService;
+	
+	@GetMapping("/board_list")
+	public String board_list(Model model) {
+		List<BoardVO> list = boardService.selectAllBoards();
+		model.addAttribute("boardList", list);
+		log.info("boardList : " + list);
+		
+		return "board/boardList";
+	}
+	
+	@GetMapping("/board_write_form")
+	public String board_write_form() {
+		return  "board/boardWrite";
+	}
+	
+	@PostMapping("/board_write")
+	public String board_write(BoardVO vo) {
+		boardService.insertBoard(vo);
+		return "redirect:/board_list";
+	}
+	
+	//board_view&num
+	@GetMapping("/board_view")
+	public String board_view(@RequestParam("num") int num, Model model) {
+		BoardVO vo = boardService.selectOneByNum(num);
+		model.addAttribute("board", vo);
+		return  "board/boardView";
+	}
+	
+	//board_check_pass_form
+	@GetMapping("/board_check_pass_form")
+	public String board_check_pass_form(@RequestParam("num") int num) {
+		return "board/boardCheckPass";
+	}
+	
+	//board_check_pass
+	@GetMapping("/board_check_pass")
+	public String board_check_pass(@RequestParam("num") int num,@RequestParam("pass") String pass,
+			Model model) {
+
+		BoardVO vo = boardService.selectOneByNum(num);
+		
+		if(pass.equals(vo.getPass())) {
+			log.info("board_check_pass");
+			return "board/checkSuccess";
+		}else {
+			model.addAttribute("message", "비밀번호가 틀렸습니다.");
+			return "board/boardCheckPass";
+		}
+	}
+	
+	//board_update_form?num=${param.num}"
+	@GetMapping("/board_update_form")
+	public String board_update_form(@RequestParam("num") int num, Model model) {
+		BoardVO vo = boardService.selectOneByNum(num);
+		model.addAttribute("board", vo);
+		log.info("board_update_form");
+		return "board/boardUpdate";
+	}
+	
+	
+	//board_update
+	@PostMapping("/board_update")
+	public String board_update(BoardVO vo) {
+		
+		boardService.updateBoard(vo);
+		
+		return "redirect:/board_list";
+	}
+	
+	//board_delete
+	@GetMapping("/board_delete")
+	public String board_delete(@RequestParam("num") int num) {
+		
+		boardService.deleteBoard(num);
+		
+		return "redirect:/board_list";
+	}
+}

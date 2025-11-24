@@ -1,0 +1,41 @@
+package com.saeyan.service;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.saeyan.dto.BoardVO;
+import com.saeyan.repository.BoardRepository;
+import com.saeyan.util.DBManager;
+
+@Service
+public class BoardService {
+
+	@Autowired
+	BoardRepository boardRepository;
+	
+	public List<BoardVO> selectAllBoards() {
+		
+		return boardRepository.selectAllBoards();
+
+	} 
+	
+	public void insertBoard(BoardVO vo) {
+		
+		boardRepository.insertBoard(vo);
+		
+	} //end insertBoard
+	
+	public BoardVO selectOneByNum(int num) {
+		boardRepository.updateReadCount(num);
+		return boardRepository.selectOneByNum(num);
+	
+	} //end selectOneByNum
+
+	
+}

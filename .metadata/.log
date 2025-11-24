@@ -1,0 +1,197 @@
+!SESSION 2025-11-24 09:28:11.015 -----------------------------------------------
+eclipse.buildId=4.37.0.202511091838
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2025-11-24 09:28:12.791
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-11-24 09:28:12.977
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.31.0 (331) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-11-24 09:28:46.820
+!MESSAGE Logback config file: D:\Works\JSP_AD\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-11-24 09:28:47.180
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-11-24 09:28:47.180
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-11-24 09:28:47.513
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-11-24 09:28:47.513
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-11-24 09:28:52.436
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\M'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2025-11-24 09:37:33.122
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-11-24 09:37:33.122
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolInWorkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolInWorkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 0 2025-11-24 09:40:39.282
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.jface.internal.text.html.BrowserInformationControlInput.getHtml()" because "this.fInput" is null
+	at org.eclipse.jface.internal.text.html.BrowserInformationControl.computeSizeHint(BrowserInformationControl.java:432)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.updateBrowserSize(FocusableBrowserInformationControl.java:101)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.lambda$1(FocusableBrowserInformationControl.java:105)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4258)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3370)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.springframework.boot.ide.branding.SpringToolsApplication.start(SpringToolsApplication.java:22)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:627)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1431)
+
+!ENTRY org.eclipse.ui 4 0 2025-11-24 10:32:40.731
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4946)
+	at org.eclipse.swt.SWT.error(SWT.java:4861)
+	at org.eclipse.swt.SWT.error(SWT.java:4832)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:507)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:628)
+	at org.eclipse.swt.browser.Edge.scheduleMouseMovementHandling(Edge.java:885)
+	at org.eclipse.swt.browser.Edge.lambda$37(Edge.java:892)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4258)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3370)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.springframework.boot.ide.branding.SpringToolsApplication.start(SpringToolsApplication.java:22)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:627)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1431)
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-24 11:07:38.735
+!MESSAGE [Info]	ESLint server running in node v22.13.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-24 11:07:38.776
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.7.3 from path "C:\Users\M\Downloads\sts-4.32.2.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.2.6.202502071606\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-24 11:07:38.780
+!MESSAGE [Info]	Typescript Server version info: {version=5.7.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-24 11:07:38.833
+!MESSAGE [Info]	No ES Library found for file: file:///D:/Works/JSP_AD/demo/src/main/resources/static/script/board.js
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-11-24 11:07:38.865
+!MESSAGE Could not get hover region due to timeout after 1000 milliseconds
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-11-24 11:07:39.875
+!MESSAGE Could not get hover information due to timeout after 1000 milliseconds
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:08:56.173
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:08:58.116
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:12:23.726
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:12:26.875
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:12:27.446
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:12:31.300
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:12:36.213
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:12:39.709
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:12:42.024
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:19:41.543
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:21:39.115
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:23:24.256
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:24:05.427
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:24:58.287
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:24:58.294
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:24:58.354
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:26:06.843
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:27:18.582
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-11-24 11:28:05.852
+!MESSAGE [Error]	Unexpected resource file:///D:/Works/JSP_AD/demo/src/main/java/com/saeyan/controller/BoardController.java

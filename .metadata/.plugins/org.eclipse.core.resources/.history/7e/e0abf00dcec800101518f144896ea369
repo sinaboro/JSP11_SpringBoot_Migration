@@ -1,0 +1,14 @@
+spring.application.name=demo
+
+
+# ================================
+#  DataSource (MySQL 접속)
+# ================================
+spring.datasource.url=jdbc:mysql://localhost:3306/edudb?serverTimezone=Asia/Seoul
+spring.datasource.username=jdbctest
+spring.datasource.password=1234
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# MyBatis 사용시 (옵션)
+mybatis.mapper-locations=classpath:mapper/*.xml
+mybatis.type-aliases-package=com.example.demo.dto
