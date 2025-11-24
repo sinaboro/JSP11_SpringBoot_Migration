@@ -1,14 +1,14 @@
 # JSP11_SpringBoot_Migration
 
-# 계정생성
+### 계정생성
 create database edudb;
 create user 'jdbctest'@'%' identified by 'jdbctest'; grant all on edudb.* to 'jdbctest'@'%';
 flush privileges;
 
-# 데이블 사용
+### 데이블 사용
 use edudb;
 
-# 데이블 생성
+### 데이블 생성
 create table board(
     num int primary key auto_increment,
     pass varchar(30) not null,
@@ -20,10 +20,10 @@ create table board(
     writedate datetime default current_timestamp
 );
 
-## 데이블 컬럼 정보 확인
+### 데이블 컬럼 정보 확인
 desc board;
 
-## 데이블 데이타 입력
+### 데이블 데이타 입력
 INSERT INTO board(name, email, pass, title, content)
 VALUES('성윤정', 'pinksung@nate.com', '1234', '첫방문', '반갑습니다.');
 INSERT INTO board( name, email, pass, title, content)
