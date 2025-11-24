@@ -15,14 +15,10 @@ GRANT ALL ON edudb.* TO 'jdbctest'@'%';
 -- 권한 적용
 FLUSH PRIVILEGES;
 
-
-## 2. 데이터베이스 선택
-'''
+2. 데이터베이스 선택
 USE edudb;
-'''
 
-
-## 3. 데이블 생성
+3. 테이블 생성
 CREATE TABLE board (
     num       INT PRIMARY KEY AUTO_INCREMENT,
     pass      VARCHAR(30)  NOT NULL,
@@ -34,19 +30,23 @@ CREATE TABLE board (
     writedate DATETIME     DEFAULT CURRENT_TIMESTAMP
 );
 
+4. 테이블 컬럼 정보 확인
+DESC board;
 
-### 데이블 컬럼 정보 확인
-desc board;
+5. 초기 데이터 입력
+INSERT INTO board (name, email, pass, title, content)
+VALUES ('성윤정', 'pinksung@nate.com', '1234', '첫방문', '반갑습니다.');
 
-### 데이블 데이타 입력
-INSERT INTO board(name, email, pass, title, content)
-VALUES('성윤정', 'pinksung@nate.com', '1234', '첫방문', '반갑습니다.');
-INSERT INTO board( name, email, pass, title, content)
-VALUES('성윤정', 'pinksung@nate.com', '1234', '김밥', '맛있어요.');
-INSERT INTO board( name, email, pass, title, content)
-VALUES('전수빈', 'raccon@nate.com', '3333', '고등애', '일식입니다.');
-INSERT INTO board( name, email, pass, title, content)
-VALUES('전원지', 'one@nate.com', '1111', '갯골마을', '돼지삼겹살이 맛있습니다.');
-commit;
+INSERT INTO board (name, email, pass, title, content)
+VALUES ('성윤정', 'pinksung@nate.com', '1234', '김밥', '맛있어요.');
 
-select * from board;
+INSERT INTO board (name, email, pass, title, content)
+VALUES ('전수빈', 'raccon@nate.com', '3333', '고등애', '일식입니다.');
+
+INSERT INTO board (name, email, pass, title, content)
+VALUES ('전원지', 'one@nate.com', '1111', '갯골마을', '돼지삼겹살이 맛있습니다.');
+
+COMMIT;
+
+6. 데이터 확인
+SELECT * FROM board;
